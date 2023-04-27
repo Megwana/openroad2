@@ -1,108 +1,252 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome USER_NAME,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
+# Open Road
 ---
 
-Happy coding!
+## Table of Contents
+---
+- [User Experience (UX)](#user-experience-ux)
+    * [Strategy](#strategy)
+    * [User Stories](#user-stories)
+    * [Scope](#scope)
+    * [Structure](#structure)
+- [Features](#features)
+    * [Home Page](#home-page)
+    * [Road Trips](#road-trips)
+    * [Contact Form](#contact-form)
+    * [Footer](#footer)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+    * [Code Validation](#code-validation)
+    * [Manual Testing](#manual-testing)
+    * [Automated Testing](#automated-testing)
+    * [Bugs and Fixes](#bugs-and-fixes)
+- [Deployment](#deployment)
+    * []()
+    * []()
+- [Credits](#credits)
+- [Acknowledgments](#acknowledgments)
+
+## User Experience (UX)
+---
+### Strategy
+
+With the core UX Principles in mind, I began brain storming and deciding who my target audience for my road trip website and the features I can intergrate that can benefit users. 
+
+The target audience for Open Road are:
+- 21-35 year olds
+- People who seek adventure and not afraid to go on the off beaten track
+- People that have potentially less responsibilities and are able to take a road trip
+- People who enjoy getting inspiration from others experiences and sharing their own
+
+Following the pandemic, there are circa three years worth of missed years people were unable to travel and explore. We are seeing more [young people](https://www.travelmarketreport.com/RetailStrategies/articles/Younger-Travelers-Plan-to-Travel-More-Spend-More-Post-Pandemic) wanting to travel and have new experiences to make up for lost time. 
+
+As the site is specifically road trip orientated travel, younger people often go on holiday with friends and have potentially less responsibilities such as children/mortgage. A road trip can be as short or as long as you want it to be, providing flexibility.
+
+The users will be looking for:
+- The ability to navigate the site with ease.
+- Read concise information about road trips the user is interested in. 
+- The user is able to create a user account. Which links to the following point below:
+- The ability to share their own experiences via writing their own blog or commenting on another post. 
+
+Due to the site being able towards a younger audience who often browse on mobile devices; I will use bootstrap elements to customise and create a responsive site. Often young people are looking for a memory building experience with friends/ loved ones or finding themselves in a solo experience; which road trips can offer. 
+
+### User Stories
+
+Please find all my user stories & acceptance criteria in greater detail [here]()
+
+- USER STORY: Manage posts.
+- USER STORY: Manage/create Categories.
+- USER STORY: Site Pagination.
+- USER STORY: Open a post.
+- USER STORY: Basic website layout with Navbar/footer.
+- USER STORY: User can clear view Logged in status.
+- USER STORY: Like a post.
+- USER STORY: View road trip posts list
+- USER STORY: Remind user to register for an account if they do not have one. 
+- USER STORY: Scroll to the Top Button on home page.
+- USER STORY: Comment on a post. 
+- USER STORY: Intuitive sit navigation.
+- USER STORY: All road trips must have a description, suggested travel length.
+- USER STORY: Accout Registration.
+- USER STORY: Informative landing page.
+
+### Scope
+
+To achieve both user and business goals, I will include the following features:
+
+- A responsive navbar that allows users to navigate through various pages on the site.
+- A Landing page providing a brief summary about Open Road and links to trips posts and login/ registration options.
+- Road Trip Post page, with Card displaying the different posts from users shared.
+- Add Road Trip page, allowing logged in users to share their experience.
+- Post detail page, users can click on a post from road trip page that they are interested in and read the full post. 
+- Edit Post page: If a user is logged in, there shows an Edit Button on both the road trip page and post detail page. This will take them to the edit page where they can make alterations to their post. 
+- Delete Post Page: If a user is logged in, there shows a Delete Button on both the road trip page and post detail page. This will take them to the delete page where they can make alterations to their post.
+- Register/ login and sign out feature using Django allauth.
+
+### Structure
+
+The design of website is made to be clean cut and simple. This is to offer key information quick and locate what is desired rather than reading unessary information.
+
+The website is made of two apps:
+- Website: offers core functionality
+- roadtrip: display posts and blog post data
+
+App structure:
+
+#### Skeleton
+
+Please note, the website differs slightly from the original wireframes.
+
+The theme is supposed to be clean cut and simple, offering the simplicity that is a humbling road trip journey. I have used bootstrap to create styling and design to my website. 
+
+[Wireframes can be viewed here](https://share.balsamiq.com/c/jFLAg5a7apUrV86ucTo7tU.png)
+
+I chose a dark green colour to offer a nature theme to the site as road trips around the USA are heavily influence by the immersive experience in the great unknown. 
+---
+## Features
+### Home Page
+
+Navigation Bar: The nav bar has links to all the active pages. This allows the user to clearly identify each option and navigate to where they want. 
+
+The Nav bar is fully responsive and collapses on mobile devices to a hamburger icon. This allows the user to easily access the navigation links without the hassle of pressing back buttons on the browser. Or struggling to read small text along the bar. 
+
+Links to road trips - This offers a second option to the user in case they are scrolling on the home page initially and decide they want to view posts. 
+
+About information - this opens into a modal and offers the user a brief summary of the site on the home page. 
+
+### Road trips
+
+Site users are able to view blog posts from people's road trips around the USA.
+
+If the user is logged in, they are able to view `Edit` and `Delete` buttons for posts they have published. Otherwise they are not able to do so with others posts.
+
+### Post Detail
+
+Here the user is able to view the blog post in full detail and comment if they wish to share an opinion or feeback. 
+
+If the user is logged in, they are able to view `Edit` and `Delete` buttons for posts they have published. Otherwise they are not able to do so with others posts.
+
+### Add Road trips
+
+Once logged in, users with log ins are able to add their own blog experiences. 
+
+### Edit Road trips
+
+Once logged in, users with log ins are able to add their own blog experiences. 
+
+### Delete Road trips
+
+Once logged in, users with log ins are able to add their own blog experiences. 
+
+### Comment on posts
+
+Once logged in, users with log ins are able to leave comments on travel posts.
+
+### Like a post
+
+Once logged in, users with log ins are able to like posts.
+
+### Footer
+---
+## Technologies Used
+### Languages 
+- HTML
+- CSS
+- JavaScript
+- [Python](https://www.python.org/)
+    - Python used to write all of the code in this application that makes it fully functional.
+- [Django](https://www.djangoproject.com/)
+    - Django is the framework that has been used to build the overall project and all its apps.
+
+### Tools 
+
+- [Image Color Picker](https://imagecolorpicker.com/color-code/20442c)
+- [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw8-OhBhB5EiwADyoY1eL0Yyb7LjlqjLVuM9xfXLRdmzK9m1CxpreaZIzIzxFIs8Oms8CNSBoCPagQAvD_BwE)
+- [Font Awesome](https://fontawesome.com/)
+    - Used for the icons in the website.
+- [GitHub](https://github.com/)
+    - Used to store code for the project once pushed.
+- [Pep8](http://pep8online.com/)
+    - Used to test code for any issues/errors.
+ [W3C Markup Validation Service](https://validator.w3.org/) 
+    - Used to validate HTML code written and used for this webpage.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate CSS code written and used for this webpage.
+- [JSHint](https://jshint.com/)
+    - Used to validate JS code.
+- [PostgresSQL/ElephantSQL](https://www.elephantsql.com/)
+    - I have used ElephantSQL a PostgreSQL relational database in deployment to store the data for my models.
+- []()
+
+## Testing
+### Code Validation
+### Automated Testing
+
+I have used the Coverage library to carry out my Automated Testing. 
+
+To generate your own coverage report from the command line:
+1. Install the package using the command `pip3 install coverage`.
+2. Run coverage run manage.py test.
+3. Run `coverage html` to generate the report.
+4. To access the report via the browser, use the command `python3 -m http.server` and open `index.html` file from inside `htmlcov` folder, that will appear. 
+
+### Manual Testing
+### Bugs and Fixes
+--- 
+## Deployment 
+The main branch of my repository open_road, has been used for the deployment of this application.
+
+### Github and Gitpod
+
+In order to deploy my Django application, I used the Code Institute Python Essentials Template.
+
+Instructions: 
+- Click on `Use This Template` button.
+- Then create a repository name and a concise description.
+- Click on `Create Repository from Template`. This will then create your repository and open up into its repository page.
+- Then create a Gitpod Workspace. Click on `Gitpod`. Expect a few minutes of loading while it sets up.
+- Rule of thumb should be to return to the Gitpod Workspace when you want to continue working on the project rather than clicking on `Gitpod` in your repository; as this will create a new workspace rather than continue on the one you are currently working on. 
+- (Optional: but it is good to pin your workspace so that it isn't deleted).
+- It is important to commit your work carried out often with clear messages. The following commands are used:
+3 Step Commit Process:
+    - `git add .`: adds **ALL** modified files to staging area
+    - `git commit -m "A message explaining what you are committing"`: commits changes to a local repository.
+    - `git push`: pushes all committed changes to the subject Github repository.
+
+### Heroku
+
+To deploy my project, I followed the steps offered by the Code Institute tutorial and the [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
+
+- In the Gitpod CLI use `pip3 freeze --local requirements.txt` to create the relevant files needed for Heroku to succesfully install your project dependencies. 
+- **Important**: `requirements.txt` and `env.py` should be in the `.gitignore` file to prevent the files from being committed. The env.py holds the secret key and important links that should not be compromised.
+- In addition, you need a `Procfile` as this will specify the commands that are carried out by the app on startup.
+
+Instructions: 
+1. Go to [Heroku.com](https://dashboard.heroku.com/apps) and log in. You cannot do the following steps without an account. 
+2. Click `New` and select `Create New App`.
+3. Give your project a unique name. You will be prompted to change it if it is not.
+4. Select the region you are in (e.g. mine is EU).
+
+In the Heroku settings:
+You need to set your Environment Variable to essure your application deploys successfully.
+- Click `Revel Config Vars` and enter:
+ - SECRET_KEY - to be set to your chosen key
+- CLOUDINARY_URL - to be set to your Cloudinary API environment variable
+- PORT = 8000
+
+Heroku Deployment:
+- Click Deploy tab
+- Click `Github-connect` to connect your Github account.
+- Search for your repository name.
+- Select the correct repository name and click `connect`.
+- You can either manually or automatically deploy your application. 
+- Select your deployment method and click `Deploy Branch`.
+- Once ready, you will be able to click `View`. 
+--- 
+## Credits
+--- 
+Please see the following links I have used to fix bugs, learn from or tackle problems:
+
+
+## Acknowledgments
+
+I would like to thank my course mentor Akshat Garg for his guidance and support in our sessions. 
